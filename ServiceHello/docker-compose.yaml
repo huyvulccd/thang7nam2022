@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  web:
+    container_name: "hello"
+    image: "hello-docker"
+    ports:
+      - "8090:8080"
+  name:
+    container_name: "name"
+    image: "name-docker"
+    ports:
+      - "8091:8081"
