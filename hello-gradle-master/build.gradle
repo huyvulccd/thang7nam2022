@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+task demo {
+    println 'Demo Gradle'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'HelloWorld'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+
+group 'guru.springframework'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.apache.commons:commons-lang3:3.12.0')
+}
+
+test {
+    useJUnitPlatform()
+}
