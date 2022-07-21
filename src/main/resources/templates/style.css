@@ -1,0 +1,120 @@
+html{
+    z-index: 0;
+}
+table, tr, td, th {
+    border: 1px solid #000 !important;
+}
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toolbar * *{
+    margin-top: 5%;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+}
+.toolbar-elm{
+    max-height: 30px;
+    min-height: 30px;
+}
+
+.toolbar-export{
+    display: inline;
+    background-color: rgb(104, 104, 104);
+    color: white ;
+    border-radius: 5px;
+}
+.toolbar-newtask{
+    display: inline;
+    background-color: rgb(72, 99, 255);
+    color: white ;
+    border-radius: 5px;
+}
+.right input{
+    height: 30px;
+    border-radius: 5px;
+    width: 250px
+}
+.right button{
+    display: inline;
+    height: 30px;
+    background-color: rgb(72, 99, 255);
+    color: white ;
+    border-radius: 5px;
+}
+.right select{
+    display: inline;
+    height: 30px;
+    background-color: rgb(44, 65, 182);
+    color: white ;
+    border-radius: 5px;
+}
+select *{
+    background-color: white;
+    color: black;
+}
+table button{
+    border-radius: 5px;
+    color: white
+}
+
+.tablee{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+table{
+    border: 1px solid black;
+    font-size: 30px;
+    width: 90%;
+    /* background-color: #eee; */
+}
+
+table thead {
+    background-color: rgb(218, 26, 26);
+}
+
+table thead tr {
+    width: 100%;
+    display: flex;
+
+}
+/* th{
+    display: flex;
+    border: 1px solid black;
+    align-items: center
+} */
+table .edit{
+    display: inline;
+    height: 50px;
+    margin-left: 7%;
+    background-color: rgb(72, 99, 255);
+    color: white ;
+    border-radius: 5px;
+}
+table .detail{
+    display: inline;
+    height: 50px;
+    background-color: rgb(88, 113, 255);
+    color: white ;
+    border-radius: 5px;
+}
+table .delete{
+    display: inline-block;
+    height: 50px;
+    background-color: rgb(255, 50, 50);
+    color: white ;
+    border-radius: 5px;
+}
+tbody tr td {
+    width: 300px !important;
+    max-width: 300px !important;
+    word-wrap: break-word;
+}
+
+.title{
+   display: flex;
+   justify-content: center;
+}
