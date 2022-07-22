@@ -15,9 +15,19 @@ import java.util.Optional;
 @Controller
 @RequestMapping("")
 public class TaskControllerHelper {
+    @Autowired
+    private TaskService taskService;
 
     @GetMapping("")
-    public String getListTasks(){.\
-        return"chuyenhuong.html" ;
+    public String getListTasks(
+            Model model) {
+        model.addAttribute("listTask", taskService.findPaginated(1));
+        List<Integer> count_page = new ArrayList<Integer>();
+        for (int i = 0; i < taskService.getAllTasks().size(); i += 10) {
+            count_page.add(i / 10 + 1);
+        }
+
+        model.addAttribute("countPage", count_page);
+        return "index.html";
     }
 }

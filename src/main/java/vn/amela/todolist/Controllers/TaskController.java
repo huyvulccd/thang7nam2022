@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/list-tasks")
+@RequestMapping("/list-tasks/")
 public class TaskController {
     @Autowired
     private TaskService taskService;
@@ -28,8 +28,8 @@ public class TaskController {
         for (int i = 0; i < taskService.getAllTasks().size(); i+=10){
             count_page.add(i/10+1);
         }
-
-
+        model.addAttribute("prePage", currentPage>1?currentPage-1:1);
+        model.addAttribute("nextPage", currentPage < count_page.size()? currentPage+1: count_page.size());
         model.addAttribute("countPage", count_page);
         return "index.html";
     }
